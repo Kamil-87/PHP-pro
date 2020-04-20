@@ -14,6 +14,6 @@ class DiscountPrice extends Price
     /** Вывод информации о товаре */
     public function display(): void
     {
-        echo $this->discount . " " . $this->chosenCurrency() . "<br>";
+        echo $this->discount  . "%<br>";
     }
 }

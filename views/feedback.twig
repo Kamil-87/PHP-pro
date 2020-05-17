@@ -1,0 +1,15 @@
+
+{% block feedback %}
+        <h1>Отзывы</h1>
+        <div>
+        {% for item in feedback %}
+                <div class="card__body">
+                        <h4>{{ item.user_name }}</h4>
+                        <p>{{ item.text }}</p>
+                </div>
+                <br>
+                <hr>
+                <br>
+        {% endfor %}
+        </div>
+{% endblock %}

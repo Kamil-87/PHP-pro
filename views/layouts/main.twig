@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+    <ul class="menu">
+        {% for item in menu %}
+            <li><a href="{{item.href}}">{{item.name}}</a></li>
+        {% else %}
+            <li><a href="/">Главная</a></li>
+        {% endfor %}
+    </ul>
+
+<div class="container">
+    <p></p>
+
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+</html>

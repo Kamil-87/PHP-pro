@@ -1,0 +1,22 @@
+{% extends 'layouts/main.twig' %}
+
+{% block content %}
+
+    <div class="product">
+
+        <h1>{{ product.name }}</h1>
+        <img src="/images/max/{{ product.image }}" alt="" class="product__image">
+        <p class="product__price"><strong>{{ product.price }} руб</strong></p>
+        <p class="product__views">Количество просмотров: <strong>{{ product.views }}</strong></p>
+        <a href="/basket/add?id={{ product.id }}" class="btn">Добавить в корзину</a><br><br>
+
+        <div>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block feedback %}
+
+{% endblock %}

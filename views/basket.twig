@@ -1,0 +1,23 @@
+{% extends 'layouts/main.twig' %}
+
+{% block content %}
+    <h1>Корзина</h1>
+
+    {% for product in session.products %}
+
+        <div class="basket__product">
+            <h3>{{ product.product.name }}</h3>
+            <p>{{ product.count }} шт.</p>
+            <a href="/basket/add?id={{ product.product.id }}" style="padding: 3px 10px;">+</a>
+            <a href="/basket/del?id={{ product.product.id }}">-</a>
+{#            <p>{{ getTotalGoodPrice(product.product.price, product.count) }} руб.</p>#}
+            <a href="/basket/delFromBasket?id={{ product.product.id }}">Удалить товар</a>
+        </div>
+
+    {% else %}
+        <p>Нет товаров</p>
+    {% endfor %}
+
+
+
+{% endblock %}
